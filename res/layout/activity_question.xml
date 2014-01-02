@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp" >
+
+    <TextView
+        android:id="@+id/tv_activity_question_current_question_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="第1题"
+        android:textColor="@color/black"
+        android:textSize="24sp" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/tv_activity_question_current_question_num"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="7dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/tv_activity_question_question_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="第一题名称"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/rg_activity_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="抬起腿"
+                    android:textSize="24sp" />
+            </RadioGroup>
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/scrollView1"
+        android:layout_marginTop="-60dp" >
+
+        <Button
+            android:id="@+id/btn_activity_question_previous"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/btn_strat_scale_seletor"
+            android:text="@string/btn_previous"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/btn_activity_question_next"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_strat_scale_seletor"
+            android:text="@string/btn_next"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_activity_question_total_point"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:maxLines="1"
+            android:text="@string/text_0"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:typeface="normal" />
+    </RelativeLayout>
+
+</RelativeLayout>
